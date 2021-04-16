@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Ямалиев Тимур</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="spring">
+                <button id="start" class="start-button">Play</button>
+                <div class="spring__top">
+                </div>
+                <div class="spring__vert">
+                </div>
+                <div class="spring__first">
+                </div>
+                <div class="spring__left">
+                </div>
+                <div class="spring__right">
+                </div>
+                <div class="spring__left">
+                </div>
+                <div class="spring__right">
+                </div>
+                <div class="spring__left">
+                </div>
+                <div class="spring__right">
+                </div>
+                <div class="spring__left">
+                </div>
+                <div class="spring__right">
+                </div>
+                <div class="spring__left">
+                </div>
+                <div class="spring__right">
+                </div>
+                <div class="spring__last">
+                </div>
+                <div class="spring__vert">
+                </div>
+                <div class="weight"></div>
+            </div>
+            <div class="options">
+                <div class="parameters">
+                    <div class="title-2">
+                        Область параметров:
+                    </div>
+                    <div class="parameters__item">
+                        <div class="parameters__title">
+                            <label for="inp_m">Выберите массу груза от 0,5 до 1 кг (m):</label>
+                        </div>
+                        <input type="range" class="input-char" id="inp_m" min="0.5" max="1" step="0.1" value="0.5"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output>0.5</output> кг
+                    </div>
+                    <div class="parameters__item">
+                        <div class="parameters__title">
+                            <label for="inp_k">Выберите жесткость пружины от 5 до 9 Н/м (k):</label>
+                        </div>
+                        <input type="range" class="input-char" id="inp_k" min="5" max="9" step="1" value="5"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output>5</output> Н/м
+                    </div>
+                    <div class="parameters__item">
+                        <div class="parameters__title">
+                            <label for="inp_x0">Выберите первоначальное отклонение от равновесия (вниз) от 0 до 20 см
+                                (x<sub>0</sub>):</label>
+                        </div>
+                        <input type="range" class="input-char" id="inp_x0" min="0" max="20" step="2" value="10"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output>10</output> см
+                    </div>
+                </div>
+
+                <div class="characteristics">
+                    <div class="title-2">
+                        Область характеристик:
+                    </div>
+                    <div class="characteristics__item">
+                        <div class="characteristics__title">Циклическая частота собственных колебаний:</div>
+                        w<sub>0</sub> = <span id="w0"></span> рад/с.
+                    </div>
+                    <div class="characteristics__item">
+                        <div class="characteristics__title">Время колебаний:</div>
+                        t = <span id="t"></span> с.
+                    </div>
+                    <div class="characteristics__item">
+                        <div class="characteristics__title">Количество полных колебаний:</div>
+                        n = <span id="n"></span>
+                    </div>
+                    <div class="characteristics__item">
+                        <div class="characteristics__title">Текущее отклонение:</div>
+                        x<sub>t</sub> = <span id="xt"></span> см
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
